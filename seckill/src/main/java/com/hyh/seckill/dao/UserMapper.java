@@ -15,6 +15,8 @@ public interface UserMapper {
 
     @Select("select * from user where id=#{id}")
     User getUserById(@Param("id")int i);
+
+
     @Select("insert into user(id,name) values(#{id},#{name}) ")
     void insertUser(User user);
 }
